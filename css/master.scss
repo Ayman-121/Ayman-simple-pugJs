@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.header{
+  background-color: #eee;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 20px;
+  .container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+      font-size: 25px;
+      font-weight: bold;
+      color: orange;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+    ul{
+      display: flex;
+      li:not(:last-of-type){
+        margin: 0 10px;
+        padding: 10px;
+        transition: 0.3s;
+        font-size: 17px;
+        user-select: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        &:hover,
+        &.active{
+          border-bottom: 2px solid orange;
+          color: orange;
+        }
+      }
+      li:last-of-type{
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width:900px) {
+  .header ul {
+    li {
+      display: none;
+    }
+    li:last-of-type{
+      display: block !important;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
+.popup{
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2px;
+  a{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: monospace;
+    border-radius: 4px;
+    color: orange;
+    font-size: 17px;
+    &:hover{
+      background-color: #eee;
+    }
+  }
+}
+body{
+  background-color: #0909;
+}
+.landing{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .container{
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: #f9f7f7;
+    border-radius: 10px;
+    box-shadow: #a8a8a8 0 0 20px 4px;
+    h1{
+      font-size: 60px;
+      font-weight: bold;
+      font-family: monospace;
+      position: relative;
+      top: 40%;
+      left: 10%;
+      transform: translateY(-50%);
+      letter-spacing: 4px;
+    }
+    p{
+      color: orange;
+      font-weight: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      position: relative;
+      top: 35%;
+      transform: translateY(-50%);
+      left: 10%;
+    }
+  }
+}
